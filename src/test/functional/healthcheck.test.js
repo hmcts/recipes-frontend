@@ -9,9 +9,7 @@ const frontendURL = process.env.TEST_URL || 'http://localhost:1337';
 chai.use(chaiHttp);
 
 //ignore self signed certs
-if (process.env.NODE_ENV !== 'prod') {
-  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-}
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 describe('GET /health', function () {
   this.timeout(httpTimeout);
