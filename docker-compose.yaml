@@ -1,0 +1,43 @@
+---
+version: '2.2'
+
+services:
+  recipes-frontend:
+    build:
+      context: .
+    cpus: 0.2
+    mem_limit: 128M
+    environment:
+      RECIPE_BACKEND_URL: http://recipes-backend:4550
+    ports:
+      - 1337:1337
+    depends_on:
+      - recipes-backend
+  recipes-backend:
+    image: hmctspublic.azurecr.io/recipes/backend:latest
+    mem_limit: 1024M
+    environment:
+      POSTGRES_HOST: database
+      POSTGRES_DATABASE: recipes
+      POSTGRES_USER: recipes
+      POSTGRES_PASSWORD: recipes
+      POSTGRES_SSL_MODE: disable
+    ports:
+      - 4550:4550
+    depends_on:
+      - database
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: recipes
+      POSTGRES_PASSWORD: recipes
+      POSTGRES_DB: recipes
+    volumes:
+      - database-data:/var/lib/postgresql/data
+    ports:
+      - 5555:5432
+    mem_limit: 320m
+    memswap_limit: 0
+
+volumes:
+  database-data:
