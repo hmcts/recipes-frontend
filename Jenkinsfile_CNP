@@ -1,0 +1,44 @@
+#!groovy
+
+@Library("Infrastructure")
+
+def type = "nodejs"
+def product = "recipes"
+def component = "frontend"
+def expiresAfter = "3000-01-01"
+
+def secrets = [ 'plumsi-${env}':
+  [
+    secret('AppInsightsInstrumentationKey', 'APPINSIGHTS_INSTRUMENTATIONKEY')
+  ]
+]
+
+static LinkedHashMap<String, Object> secret(String secretName, String envVar) {
+  [ $class: 'AzureKeyVaultSecret',
+    secretType: 'Secret',
+    name: secretName,
+    version: '',
+    envVariable: envVar
+  ]
+}
+
+def yarnBuilder = new uk.gov.hmcts.contino.YarnBuilder(this)
+
+withPipeline(type, product, component) {
+  loadVaultSecrets(secrets)
+  disableLegacyDeployment()
+  expires(expiresAfter)
+
+  afterAlways('build') {
+    yarnBuilder.yarn('rebuild puppeteer')
+    yarnBuilder.yarn('build')
+  }
+
+  before('functionalTest:preview') {
+    sh """
+      yarn install
+      yarn playwright install
+    """
+  }
+
+}
