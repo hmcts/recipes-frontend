@@ -134,7 +134,7 @@ Make sure you have those values set correctly for your application.
 
 ### Healthcheck
 
-The application exposes a health endpoint (https://localhost:1337/health), created with the use of
+The application exposes a health endpoint, https://localhost:1337/health, created with the use of
 [Nodejs Healthcheck](https://github.com/hmcts/nodejs-healthcheck) library. This endpoint is defined
 in [health.ts](src/main/routes/health.ts) file. This health check will check the backend readiness state to see if it is up.
 
