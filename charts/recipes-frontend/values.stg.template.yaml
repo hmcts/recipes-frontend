@@ -1,7 +1,9 @@
 nodejs:
   image: ${IMAGE_NAME}
   ingressHost: ${SERVICE_FQDN}
+  ingressAnnotations:
+    external-dns.alpha.kubernetes.io/exclude: 'true'
   keyVaults:
-    'recipes-cft-kv':
+    'recipes-sds-kv':
       secrets:
         - name: appInsights-InstrumentationKey
