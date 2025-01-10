@@ -5,3 +5,7 @@ nodejs:
     external-dns.alpha.kubernetes.io/exclude: 'true'
   environment:
     RECIPE_BACKEND_URL: http://toffee-recipe-backend.staging.platform.hmcts.net
+  keyVaults:
+    'toffeesi':
+      secrets:
+        - name: appInsights-InstrumentationKey
