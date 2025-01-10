@@ -9,7 +9,7 @@ def expiresAfter = "3000-01-01"
 
 def keyVault = env.JENKINS_URL.contains('sds') ? 'toffeesi-${env}' : 'plumsi-${env}'
 
-def secrets = [ "{keyVault}":
+def secrets = [ "${keyVault}":
   [
     secret('AppInsightsInstrumentationKey', 'APPINSIGHTS_INSTRUMENTATIONKEY')
   ]
