@@ -78,7 +78,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:4.21.2"],\
           ["express-nunjucks", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:3.1.2"],\
           ["follow-redirects", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.15.9"],\
-          ["glob", "npm:11.0.0"],\
+          ["glob", "npm:11.0.1"],\
           ["govuk-frontend", "npm:4.9.0"],\
           ["helmet", "npm:8.0.0"],\
           ["html-webpack-plugin", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:5.6.3"],\
@@ -13086,10 +13086,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:11.0.0", {\
-        "packageLocation": "./.yarn/cache/glob-npm-11.0.0-3be4126bf5-e66939201d.zip/node_modules/glob/",\
+      ["npm:11.0.1", {\
+        "packageLocation": "./.yarn/cache/glob-npm-11.0.1-2249503635-57b12a05cc.zip/node_modules/glob/",\
         "packageDependencies": [\
-          ["glob", "npm:11.0.0"],\
+          ["glob", "npm:11.0.1"],\
           ["foreground-child", "npm:3.3.0"],\
           ["jackspeak", "npm:4.0.2"],\
           ["minimatch", "npm:10.0.1"],\
@@ -19193,7 +19193,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:4.21.2"],\
           ["express-nunjucks", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:3.1.2"],\
           ["follow-redirects", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.15.9"],\
-          ["glob", "npm:11.0.0"],\
+          ["glob", "npm:11.0.1"],\
           ["govuk-frontend", "npm:4.9.0"],\
           ["helmet", "npm:8.0.0"],\
           ["html-webpack-plugin", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:5.6.3"],\
