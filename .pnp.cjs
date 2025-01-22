@@ -28,7 +28,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@babel/core", "npm:7.26.0"],\
-          ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.25.9"],\
+          ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.5"],\
           ["@babel/preset-env", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.0"],\
           ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
           ["@codeceptjs/configure", "virtual:2a14ab5992fe358ea8ae1a7e5565b454b8bbe501212ba31b32c93000a5fbe1651f7efe73a995ef20539692c89e046d86306bc640b5b7940874297477e6155a54#npm:1.0.1"],\
@@ -488,17 +488,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@babel/eslint-parser", [\
-      ["npm:7.25.9", {\
-        "packageLocation": "./.yarn/cache/@babel-eslint-parser-npm-7.25.9-0502808380-ebb68d80b1.zip/node_modules/@babel/eslint-parser/",\
+      ["npm:7.26.5", {\
+        "packageLocation": "./.yarn/cache/@babel-eslint-parser-npm-7.26.5-991a268186-b9e4141f2a.zip/node_modules/@babel/eslint-parser/",\
         "packageDependencies": [\
-          ["@babel/eslint-parser", "npm:7.25.9"]\
+          ["@babel/eslint-parser", "npm:7.26.5"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.25.9", {\
-        "packageLocation": "./.yarn/__virtual__/@babel-eslint-parser-virtual-4d701d091a/0/cache/@babel-eslint-parser-npm-7.25.9-0502808380-ebb68d80b1.zip/node_modules/@babel/eslint-parser/",\
+      ["virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.5", {\
+        "packageLocation": "./.yarn/__virtual__/@babel-eslint-parser-virtual-11f961e55f/0/cache/@babel-eslint-parser-npm-7.26.5-991a268186-b9e4141f2a.zip/node_modules/@babel/eslint-parser/",\
         "packageDependencies": [\
-          ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.25.9"],\
+          ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.5"],\
           ["@babel/core", "npm:7.26.0"],\
           ["@nicolo-ribaudo/eslint-scope-5-internals", "npm:5.1.1-v1"],\
           ["@types/babel__core", null],\
@@ -19143,7 +19143,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["recipes-frontend", "workspace:."],\
           ["@babel/core", "npm:7.26.0"],\
-          ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.25.9"],\
+          ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.5"],\
           ["@babel/preset-env", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.0"],\
           ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
           ["@codeceptjs/configure", "virtual:2a14ab5992fe358ea8ae1a7e5565b454b8bbe501212ba31b32c93000a5fbe1651f7efe73a995ef20539692c89e046d86306bc640b5b7940874297477e6155a54#npm:1.0.1"],\
@@ -28287,18 +28287,20 @@ Require stack:
     }
     return false;
   };
-  const originalExtensionJSFunction = require$$0.Module._extensions[`.js`];
-  require$$0.Module._extensions[`.js`] = function(module, filename) {
-    if (filename.endsWith(`.js`)) {
-      const pkg = readPackageScope(filename);
-      if (pkg && pkg.data?.type === `module`) {
-        const err = ERR_REQUIRE_ESM(filename, module.parent?.filename);
-        Error.captureStackTrace(err);
-        throw err;
+  if (!process.features.require_module) {
+    const originalExtensionJSFunction = require$$0.Module._extensions[`.js`];
+    require$$0.Module._extensions[`.js`] = function(module, filename) {
+      if (filename.endsWith(`.js`)) {
+        const pkg = readPackageScope(filename);
+        if (pkg && pkg.data?.type === `module`) {
+          const err = ERR_REQUIRE_ESM(filename, module.parent?.filename);
+          Error.captureStackTrace(err);
+          throw err;
+        }
       }
-    }
-    originalExtensionJSFunction.call(this, module, filename);
-  };
+      originalExtensionJSFunction.call(this, module, filename);
+    };
+  }
   const originalDlopen = process.dlopen;
   process.dlopen = function(...args) {
     const [module, filename, ...rest] = args;
