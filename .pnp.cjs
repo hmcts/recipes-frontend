@@ -11851,7 +11851,7 @@ const RAW_RUNTIME_STATE =
           ["methods", "npm:1.1.2"],\
           ["on-finished", "npm:2.4.1"],\
           ["parseurl", "npm:1.3.3"],\
-          ["path-to-regexp", "npm:0.2.5"],\
+          ["path-to-regexp", "npm:1.9.0"],\
           ["proxy-addr", "npm:2.0.7"],\
           ["qs", "npm:6.13.1"],\
           ["range-parser", "npm:1.2.1"],\
@@ -13932,6 +13932,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["isarray", [\
+      ["npm:0.0.1", {\
+        "packageLocation": "./.yarn/cache/isarray-npm-0.0.1-92e37e0a70-49191f1425.zip/node_modules/isarray/",\
+        "packageDependencies": [\
+          ["isarray", "npm:0.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.0.0", {\
         "packageLocation": "./.yarn/cache/isarray-npm-1.0.0-db4f547720-f032df8e02.zip/node_modules/isarray/",\
         "packageDependencies": [\
@@ -16428,7 +16435,7 @@ const RAW_RUNTIME_STATE =
           ["@sinonjs/fake-timers", "npm:13.0.5"],\
           ["@sinonjs/text-encoding", "npm:0.7.3"],\
           ["just-extend", "npm:6.2.0"],\
-          ["path-to-regexp", "npm:0.2.5"]\
+          ["path-to-regexp", "npm:1.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17251,10 +17258,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["path-to-regexp", [\
-      ["npm:0.2.5", {\
-        "packageLocation": "./.yarn/cache/path-to-regexp-npm-0.2.5-5af8f2ef58-9652fd2b74.zip/node_modules/path-to-regexp/",\
+      ["npm:1.9.0", {\
+        "packageLocation": "./.yarn/cache/path-to-regexp-npm-1.9.0-723549d8d9-67f0f4823f.zip/node_modules/path-to-regexp/",\
         "packageDependencies": [\
-          ["path-to-regexp", "npm:0.2.5"]\
+          ["path-to-regexp", "npm:1.9.0"],\
+          ["isarray", "npm:0.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
