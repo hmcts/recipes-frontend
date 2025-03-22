@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.10"],\
           ["@babel/preset-env", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.9"],\
           ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-          ["@codeceptjs/configure", "virtual:6bf168eabfceeaada2d0f4708aebf885dfc7336f4e933d182710e2d89a6b17ba9a0207e6932218e4354210b10004a4f85c26e9e277802e72d74f2aa30990cfeb#npm:1.0.2"],\
+          ["@codeceptjs/configure", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.0.3"],\
           ["@hmcts/info-provider", "npm:1.2.2"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
@@ -3836,10 +3836,32 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:1.0.3", {\
+        "packageLocation": "./.yarn/cache/@codeceptjs-configure-npm-1.0.3-456ecfd32e-bc6d1b3c82.zip/node_modules/@codeceptjs/configure/",\
+        "packageDependencies": [\
+          ["@codeceptjs/configure", "npm:1.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:6bf168eabfceeaada2d0f4708aebf885dfc7336f4e933d182710e2d89a6b17ba9a0207e6932218e4354210b10004a4f85c26e9e277802e72d74f2aa30990cfeb#npm:1.0.2", {\
         "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-3429455715/0/cache/@codeceptjs-configure-npm-1.0.2-f7c8e277c3-bb1a5cbd3c.zip/node_modules/@codeceptjs/configure/",\
         "packageDependencies": [\
           ["@codeceptjs/configure", "virtual:6bf168eabfceeaada2d0f4708aebf885dfc7336f4e933d182710e2d89a6b17ba9a0207e6932218e4354210b10004a4f85c26e9e277802e72d74f2aa30990cfeb#npm:1.0.2"],\
+          ["@types/codeceptjs", null],\
+          ["codeceptjs", "npm:3.7.2"],\
+          ["lodash.merge", "npm:4.6.2"],\
+          ["lodash.mergewith", "npm:4.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/codeceptjs",\
+          "codeceptjs"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/@codeceptjs-configure-virtual-3519f6412b/0/cache/@codeceptjs-configure-npm-1.0.3-456ecfd32e-bc6d1b3c82.zip/node_modules/@codeceptjs/configure/",\
+        "packageDependencies": [\
+          ["@codeceptjs/configure", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.0.3"],\
           ["@types/codeceptjs", null],\
           ["codeceptjs", "npm:3.7.2"],\
           ["lodash.merge", "npm:4.6.2"],\
@@ -18322,7 +18344,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/eslint-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.10"],\
           ["@babel/preset-env", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:7.26.9"],\
           ["@codeceptjs/allure-legacy", "npm:1.0.2"],\
-          ["@codeceptjs/configure", "virtual:6bf168eabfceeaada2d0f4708aebf885dfc7336f4e933d182710e2d89a6b17ba9a0207e6932218e4354210b10004a4f85c26e9e277802e72d74f2aa30990cfeb#npm:1.0.2"],\
+          ["@codeceptjs/configure", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.0.3"],\
           ["@hmcts/info-provider", "npm:1.2.2"],\
           ["@hmcts/nodejs-healthcheck", "npm:1.8.5"],\
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
