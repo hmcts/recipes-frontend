@@ -37,7 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.2.0"],\
           ["@types/body-parser", "npm:1.19.5"],\
-          ["@types/chai", "npm:5.0.1"],\
+          ["@types/chai", "npm:5.2.0"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.4.8"],\
@@ -6772,10 +6772,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/chai", [\
-      ["npm:5.0.1", {\
-        "packageLocation": "./.yarn/cache/@types-chai-npm-5.0.1-ff3f709b40-0f829d4f4b.zip/node_modules/@types/chai/",\
+      ["npm:5.2.0", {\
+        "packageLocation": "./.yarn/cache/@types-chai-npm-5.2.0-553e7abcee-08d41313c2.zip/node_modules/@types/chai/",\
         "packageDependencies": [\
-          ["@types/chai", "npm:5.0.1"],\
+          ["@types/chai", "npm:5.2.0"],\
           ["@types/deep-eql", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -6786,7 +6786,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-chai-as-promised-npm-8.0.2-7f20dac090-c1ff3eb32f.zip/node_modules/@types/chai-as-promised/",\
         "packageDependencies": [\
           ["@types/chai-as-promised", "npm:8.0.2"],\
-          ["@types/chai", "npm:5.0.1"]\
+          ["@types/chai", "npm:5.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9459,7 +9459,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/chai-as-promised-virtual-f0766489bb/0/cache/chai-as-promised-npm-8.0.1-ca46459400-1938d9f00b.zip/node_modules/chai-as-promised/",\
         "packageDependencies": [\
           ["chai-as-promised", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:8.0.1"],\
-          ["@types/chai", "npm:5.0.1"],\
+          ["@types/chai", "npm:5.2.0"],\
           ["chai", "npm:4.5.0"],\
           ["check-error", "npm:2.1.1"]\
         ],\
@@ -18350,7 +18350,7 @@ const RAW_RUNTIME_STATE =
           ["@hmcts/nodejs-logging", "npm:4.0.4"],\
           ["@hmcts/properties-volume", "npm:1.2.0"],\
           ["@types/body-parser", "npm:1.19.5"],\
-          ["@types/chai", "npm:5.0.1"],\
+          ["@types/chai", "npm:5.2.0"],\
           ["@types/chai-as-promised", "npm:8.0.2"],\
           ["@types/config", "npm:3.3.5"],\
           ["@types/cookie-parser", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:1.4.8"],\
@@ -19307,7 +19307,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/sinon-chai-virtual-a9ea4480a9/0/cache/sinon-chai-npm-4.0.0-62a4c869d9-6eb3e6f9da.zip/node_modules/sinon-chai/",\
         "packageDependencies": [\
           ["sinon-chai", "virtual:e611503ae48855d3acf14aaef5ba53a1f4a095d65ded6f039f6c98d1d7c9f3dbe073d9a213d0eac67a43ce9e11bd14049a1f95c0cde812ac581bca64bbcc7961#npm:4.0.0"],\
-          ["@types/chai", "npm:5.0.1"],\
+          ["@types/chai", "npm:5.2.0"],\
           ["@types/sinon", null],\
           ["chai", "npm:4.5.0"],\
           ["sinon", "npm:19.0.2"]\
@@ -22142,7 +22142,7 @@ async function copyImpl(prelayout, postlayout, destinationFs, destination, sourc
 async function maybeLStat(baseFs, p) {
   try {
     return await baseFs.lstatPromise(p);
-  } catch (e) {
+  } catch {
     return null;
   }
 }
@@ -22401,7 +22401,7 @@ class CustomStatWatcher extends events.EventEmitter {
   stat() {
     try {
       return this.fakeFs.statSync(this.path, { bigint: this.bigint });
-    } catch (error) {
+    } catch {
       const statInstance = this.bigint ? new BigIntStatsEntry() : new StatEntry();
       return clearStats(statInstance);
     }
@@ -22727,7 +22727,7 @@ class FakeFS {
     let current = Buffer.alloc(0);
     try {
       current = await this.readFilePromise(p);
-    } catch (error) {
+    } catch {
     }
     if (Buffer.compare(current, content) === 0)
       return;
@@ -22737,7 +22737,7 @@ class FakeFS {
     let current = ``;
     try {
       current = await this.readFilePromise(p, `utf8`);
-    } catch (error) {
+    } catch {
     }
     const normalizedContent = automaticNewlines ? normalizeLineEndings(current, content) : content;
     if (current === normalizedContent)
@@ -22755,7 +22755,7 @@ class FakeFS {
     let current = Buffer.alloc(0);
     try {
       current = this.readFileSync(p);
-    } catch (error) {
+    } catch {
     }
     if (Buffer.compare(current, content) === 0)
       return;
@@ -22765,7 +22765,7 @@ class FakeFS {
     let current = ``;
     try {
       current = this.readFileSync(p, `utf8`);
-    } catch (error) {
+    } catch {
     }
     const normalizedContent = automaticNewlines ? normalizeLineEndings(current, content) : content;
     if (current === normalizedContent)
@@ -22805,13 +22805,13 @@ class FakeFS {
       let pid;
       try {
         [pid] = await this.readJsonPromise(lockPath);
-      } catch (error) {
+      } catch {
         return Date.now() - startTime < 500;
       }
       try {
         process.kill(pid, 0);
         return true;
-      } catch (error) {
+      } catch {
         return false;
       }
     };
@@ -22824,7 +22824,7 @@ class FakeFS {
             try {
               await this.unlinkPromise(lockPath);
               continue;
-            } catch (error2) {
+            } catch {
             }
           }
           if (Date.now() - startTime < 60 * 1e3) {
@@ -22844,7 +22844,7 @@ class FakeFS {
       try {
         await this.closePromise(fd);
         await this.unlinkPromise(lockPath);
-      } catch (error) {
+      } catch {
       }
     }
   }
@@ -23994,7 +23994,7 @@ class MountFS extends BasePortableFakeFS {
       let content;
       try {
         content = await sourceFs.readFilePromise(sourceP2);
-      } catch (error) {
+      } catch {
         throw Object.assign(new Error(`EINVAL: invalid argument, copyfile '${sourceP2}' -> '${destP2}'`), { code: `EINVAL` });
       }
       await destFs.writeFilePromise(destP2, content);
@@ -24026,7 +24026,7 @@ class MountFS extends BasePortableFakeFS {
       let content;
       try {
         content = sourceFs.readFileSync(sourceP2);
-      } catch (error) {
+      } catch {
         throw Object.assign(new Error(`EINVAL: invalid argument, copyfile '${sourceP2}' -> '${destP2}'`), { code: `EINVAL` });
       }
       destFs.writeFileSync(destP2, content);
@@ -24941,7 +24941,7 @@ function patchFs(patchedFs, fakeFs) {
     setupFn(patchedFs, `existsSync`, (p) => {
       try {
         return fakeFs.existsSync(p);
-      } catch (error) {
+      } catch {
         return false;
       }
     });
@@ -26302,7 +26302,7 @@ class ZipFS extends BasePortableFakeFS {
     let resolvedP;
     try {
       resolvedP = this.resolveFilename(`stat '${p}'`, p, void 0, false);
-    } catch (error) {
+    } catch {
       return false;
     }
     if (resolvedP === void 0)
@@ -27343,7 +27343,7 @@ Require stack:
         } else {
           resolution = originalFindPath.call(require$$0.Module, request, [path], isMain);
         }
-      } catch (error) {
+      } catch {
         continue;
       }
       if (resolution) {
@@ -28426,7 +28426,7 @@ function makeApi(runtimeState, opts) {
     try {
       candidates.push(unqualifiedPath);
       stat = opts.fakeFs.statSync(unqualifiedPath);
-    } catch (error) {
+    } catch {
     }
     if (stat && !stat.isDirectory())
       return opts.fakeFs.realpathSync(unqualifiedPath);
@@ -28434,7 +28434,7 @@ function makeApi(runtimeState, opts) {
       let pkgJson;
       try {
         pkgJson = JSON.parse(opts.fakeFs.readFileSync(ppath.join(unqualifiedPath, Filename.manifest), `utf8`));
-      } catch (error) {
+      } catch {
       }
       let nextUnqualifiedPath;
       if (pkgJson && pkgJson.main)
