@@ -18073,7 +18073,7 @@ const RAW_RUNTIME_STATE =
           ["progress", "npm:2.0.3"],\
           ["proxy-from-env", "npm:1.1.0"],\
           ["rimraf", "npm:3.0.2"],\
-          ["tar-fs", "npm:2.1.1"],\
+          ["tar-fs", "npm:2.1.2"],\
           ["unbzip2-stream", "npm:1.4.3"],\
           ["ws", "virtual:feb8a8747a4a8264419829ecb1a4c18816e660403a058e34b07b91672a2624c87cb38f76cd6f28d2166b7dfeebbfc94f487a23e52f141932a8e4ccc0838f69e4#npm:7.5.10"]\
         ],\
@@ -20145,10 +20145,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tar-fs", [\
-      ["npm:2.1.1", {\
-        "packageLocation": "./.yarn/cache/tar-fs-npm-2.1.1-e374d3b7a2-526deae025.zip/node_modules/tar-fs/",\
+      ["npm:2.1.2", {\
+        "packageLocation": "./.yarn/cache/tar-fs-npm-2.1.2-4231292dd1-623f7e8e58.zip/node_modules/tar-fs/",\
         "packageDependencies": [\
-          ["tar-fs", "npm:2.1.1"],\
+          ["tar-fs", "npm:2.1.2"],\
           ["chownr", "npm:1.1.4"],\
           ["mkdirp-classic", "npm:0.5.3"],\
           ["pump", "npm:3.0.2"],\
